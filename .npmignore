@@ -1,9 +1,3 @@
-Tests
-Tests/
-Tests/*
-./Tests
-./Tests/
-./Tests/*
 totpOptions.ts
 ./totpOptions.ts
 .git
