@@ -1,14 +1,15 @@
 {
-  "name": "totpgenerator_zerodepends",
+  "name": "totp_generator_hexadecimal",
   "version": "1.0.0",
-  "description": "A totp generator with 0 dependencies (other than node of course)",
+  "description": "A totp generator for generating totp values from hexadecimal keys",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "totp"
+    "totp", "hex"
   ],
   "author": "Zeilinger Alexander",
-  "license": "GPL-2.0-only"
+  "license": "GPL-2.0-only",
+  "type": "module"
 }
