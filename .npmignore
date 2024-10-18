@@ -1,0 +1,14 @@
+Tests
+Tests/
+Tests/*
+./Tests
+./Tests/
+./Tests/*
+totpOptions.ts
+./totpOptions.ts
+.git
+.git/
+.git/*
+/.git
+/.git/
+/.git/*
