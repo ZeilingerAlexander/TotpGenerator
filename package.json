@@ -1,0 +1,14 @@
+{
+  "name": "totpgenerator_zerodepends",
+  "version": "1.0.0",
+  "description": "A totp generator with 0 dependencies (other than node of course)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "totp"
+  ],
+  "author": "Zeilinger Alexander",
+  "license": "GPL-2.0-only"
+}
