@@ -2,12 +2,18 @@
   "name": "totp_generator_hexadecimal",
   "version": "1.0.0",
   "description": "A totp generator for generating totp values from hexadecimal keys",
-  "main": "index.js",
+  "module" : "./index.js",
   "scripts": {
     "test": "node Tests/GenerateTotpValue_WithHexadecimalKeyAndBasicOptions_ReturnsString.js"
   },
   "keywords": [
     "totp", "hex"
+  ],
+  "files": [
+	  "package.json",
+	  "index.js",
+	  "totpOptions.js",
+	  "README.md"
   ],
   "author": "Zeilinger Alexander",
   "license": "GPL-2.0-only",

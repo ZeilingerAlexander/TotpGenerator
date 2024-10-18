@@ -1,5 +1,4 @@
 import { GenerateTotpValue } from "../index.js";
-import { TotpOptions } from "../totpOptions.js";
 
 function PrintGenerateTotpValueResult(result, testName, expectedResultLength){
 	if (expectedResultLength !== undefined){
