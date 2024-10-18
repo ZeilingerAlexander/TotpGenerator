@@ -1,4 +1,5 @@
-import { TotpOptions } from "./totp_options";
+import { TotpOptions } from "./totpOptions.js";
+import crypto from "crypto"
 
 /*Fills the remaining space before the string with chars until its n in length (string length not memory)*/
 function LeftPad(/*String*/str, /*Char*/character,/**/len){
@@ -7,7 +8,12 @@ function LeftPad(/*String*/str, /*Char*/character,/**/len){
 	return character.repeat(remainingChars) + str;
 } 
 
-/*Generates a TOTP value from a provided hexadecimal key (string) and the provided options<br>
+/*Hex to binary with left pad zeros*/
+function htb_pad(hex){
+	return LeftPad(hex.toString(2),"0",8);
+}
+
+/*Generates a TOTP value (number) from a provided hexadecimal key (string) and the provided options<br>
  * throws on undefined key*/
 export async function GenerateTotpValue(/*Hex*/key,/*TotpOptions*/options){
 	options = new TotpOptions(options);
@@ -29,5 +35,5 @@ export async function GenerateTotpValue(/*Hex*/key,/*TotpOptions*/options){
 	let bits = htb_pad(hash[offset]) + htb_pad(hash[offset+1])
 		+ htb_pad(hash[offset+2]) + htb_pad(hash[offset+3]);
 	const totp_full = parseInt(bits,2) & 0x7fffffff;
-	return totp_full % Math.pow(10,options.digits);
+	return LeftPad((totp_full % Math.pow(10,options.digits)).toString(),"0",options.digits);
 }
